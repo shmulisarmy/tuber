@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <title>Solid App</title>
+    <script>
+    window.a = "hello"
+      window.cache = new Map();
+      window.cache.set('users', {{ users|safe }});
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+    
+      </div>
+
+      <div id="first-show-users">
+        {% for user in users %}
+      <div id="first-show-users">
+        <h3>{{ user.name }}</h3>
+        <p>{{ user.email }}</p>
+      </div>
+      {% endfor %}
+      </div>
+
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
+</html>

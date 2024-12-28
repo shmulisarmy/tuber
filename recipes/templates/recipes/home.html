@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Recipes</h1>
+    {% for recipe in recipes %}
+    <h2>{{ recipe.name }}</h2>
+    <p>{{ recipe.instructions }}</p>
+    {% endfor %}
+</body>
+</html>

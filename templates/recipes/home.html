@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+    #recipe{
+        padding: 10px;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+        .recipe {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Recipes</h1>
+    <div id="recipe">
+        {% for recipe in recipes %}
+        <div class="recipe">
+            <h2>{{ recipe.name }}</h2>
+            <p>{{ recipe.instructions }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
