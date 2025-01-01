@@ -13,6 +13,7 @@ class Recipe(models.Model):
     )
     message = models.TextField(default="A delicious recipe!")
     is_liked = models.BooleanField(default=False)
+    
 
     def __str__(self):
         return self.name
@@ -24,12 +25,18 @@ class Recipe(models.Model):
 
 
 
-# Recipe(name="Pizza", instructions="Bake the pizza in the oven").save()
-# Recipe(name="steak", instructions="Cook the steak in the oven").save()
-# Recipe(name="salad", instructions="Mix the salad in the oven").save()
-# Recipe(name="soup", instructions="Cook the soup in the oven").save()
-# Recipe(name="pasta", instructions="Cook the pasta in the oven").save()
-# Recipe(name="rice", instructions="Cook the rice in the oven").save()
-# Recipe(name="chicken", instructions="Cook the chicken in the oven").save()
-# Recipe(name="fish", instructions="Cook the fish in the oven").save()
-# Recipe(name="vegetable", instructions="Cook the vegetable in the oven").save()
+# recipes_data = [
+#     {"name": "Pizza", "message": "Bake the pizza in the oven"},
+#     {"name": "Steak", "message": "Cook the steak in the oven"},
+#     {"name": "Salad", "message": "Mix the salad in the oven"},
+#     {"name": "Soup", "message": "Cook the soup in the oven"},
+#     {"name": "Pasta", "message": "Cook the pasta in the oven"},
+#     {"name": "Rice", "message": "Cook the rice in the oven"},
+#     {"name": "Chicken", "message": "Cook the chicken in the oven"},
+#     {"name": "Fish", "message": "Cook the fish in the oven"},
+#     {"name": "Vegetable", "message": "Cook the vegetable in the oven"},
+# ]
+
+# for recipe in recipes_data:
+#     Recipe(**recipe).save()
+
